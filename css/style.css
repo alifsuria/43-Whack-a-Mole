@@ -1,0 +1,52 @@
+body{
+  position: relative;
+  height: 100vh;
+  background-color: rgb(113, 181, 223);
+}
+
+.game-title{
+  font-size: 5rem;
+}
+
+.score,.start-btn{
+  font-size: 2rem;
+}
+
+.hole{
+  position: relative;
+}
+#game{
+  height: 400px;
+}
+
+.mole{
+  background: url("../img/mole.png") bottom center no-repeat;
+  position: absolute;
+  background-size: 80%;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  z-index: 1;
+  transition: all 1s;
+}
+
+.hole{
+  overflow: hidden;
+}
+
+.hole.up .mole{
+  top: 8px;
+}
+
+.hole::after{
+  display: block;
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  z-index: 2;
+  height: 90px;
+  width: 100%;
+  background: url("../img/dirt.png") no-repeat center;
+  background-size: contain;
+}
